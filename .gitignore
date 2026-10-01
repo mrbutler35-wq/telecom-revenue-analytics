@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+*.log
+data/
+megaline_*.csv
+user_monthly_activity*.csv
+notebook_code.txt

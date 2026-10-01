@@ -1,0 +1,1 @@
+"""Megaline revenue analytics package."""
