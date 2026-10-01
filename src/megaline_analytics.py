@@ -20,12 +20,9 @@ DATA_FILES = {
 
 
 def _find_data_file(data_dir: Path, filename: str) -> Path:
-    candidates = [data_dir / filename, data_dir.parent / filename]
-    legacy_name = filename.replace(".csv", " (1).csv")
-    candidates.extend([data_dir / legacy_name, data_dir.parent / legacy_name])
-    for path in candidates:
-        if path.exists():
-            return path
+    path = data_dir / filename
+    if path.exists():
+        return path
     raise FileNotFoundError(
         f"Could not find {filename}. Put the source file in {data_dir}."
     )

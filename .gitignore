@@ -1,5 +1,7 @@
 .venv/
+venv/
 __pycache__/
+**/__pycache__/
 *.py[cod]
 .pytest_cache/
 .ipynb_checkpoints/
@@ -8,3 +10,5 @@ data/
 megaline_*.csv
 user_monthly_activity*.csv
 notebook_code.txt
+.env
+.vscode/

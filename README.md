@@ -26,7 +26,7 @@ data/
 └── megaline_plans.csv
 ```
 
-The loader also recognizes the original local filenames with ` (1)` before `.csv`, which are useful for the supplied working copy.
+The raw files are local inputs and remain excluded from Git.
 
 ## Setup and validation
 
@@ -35,7 +35,25 @@ python -m pip install -r requirements.txt
 pytest
 ```
 
-Open `Megaline.ipynb` and run all cells from the project root. The notebook uses the local files and does not embed raw records.
+The primary analysis notebook is `notebooks/telecom_revenue_analysis.ipynb`. Run all cells from the project root or from the `notebooks/` directory. It discovers the repository root from the project layout and does not embed raw records.
+
+## Project structure
+
+```text
+telecom-revenue-analytics/
+├── data/                         # local, ignored source CSVs
+├── notebooks/
+│   └── telecom_revenue_analysis.ipynb
+├── src/
+│   ├── __init__.py
+│   └── megaline_analytics.py
+├── tests/
+│   └── test_billing.py
+├── .gitignore
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
 
 ## Billing rules
 
